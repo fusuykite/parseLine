@@ -1,0 +1,7 @@
+Andrew Yan (ayan03)
+Yusuf Bahadur (ybahadur)
+
+Limits: 
+Command line length: 512 bytes (this is including the null terminator)
+Commands in a pipeline: 10 commands
+Arguments to a command: 10 arguments
