@@ -10,6 +10,7 @@ int main() {
     int i = 0;
     char cmd_line[MAX_CMD_LEN] = { 0 };
     char cmd_line_cpy[MAX_CMD_LEN] = { 0 };
+    char cmd_line_cpy_third[MAX_CMD_LEN] = { 0 };
     char *arg_token[MAX_CMD_LEN];
     char *pipe_token[MAX_CMD_PIPE];
     int *arg_count = calloc(1, sizeof(int));
@@ -40,11 +41,13 @@ int main() {
             return 1; 
         }
     }
+    /* Case where there are no pipes */
     else {
         if (no_pipe_print(arg_token, *arg_count, *pipes, cmd_line_cpy) != 0) {
             return 1;
         }
     }
+    /* Checks are completed so delimit cmd_line_cpy_third by spaces using strtok */
     
     free(pipes);
     free(arg_count);
