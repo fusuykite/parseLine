@@ -10,6 +10,7 @@ int main() {
     int i = 0;
     char cmd_line[MAX_CMD_LEN] = { 0 };
     char cmd_line_cpy[MAX_CMD_LEN] = { 0 };
+    char cmd_line_cpy_y1[MAX_CMD_LEN] = {0}
     char cmd_line_cpy_third[MAX_CMD_LEN] = { 0 };
     char *arg_token[MAX_CMD_LEN];
     char *pipe_token[MAX_CMD_PIPE];
@@ -25,6 +26,8 @@ int main() {
 
     /* Strcpy for the possibility of the second strtok */
     strcpy(cmd_line_cpy, cmd_line);
+    strcpy(cmd_line_cpy_y1, cmd_line_cpy); 
+    
     if (token_args(arg_token, cmd_line, &arg_count, &pipes) != 0) {
         return 1;
     }
